@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B48B41881715FBD50032968D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41871715FBD50032968D /* UIKit.framework */; };
+		B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41891715FBD50032968D /* Foundation.framework */; };
+		B48B418C1715FBD50032968D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B418B1715FBD50032968D /* CoreGraphics.framework */; };
+		B48B41921715FBD50032968D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B48B41901715FBD50032968D /* InfoPlist.strings */; };
+		B48B41941715FBD50032968D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41931715FBD50032968D /* main.m */; };
+		B48B41981715FBD50032968D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41971715FBD50032968D /* AppDelegate.m */; };
+		B48B419A1715FBD50032968D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B48B41991715FBD50032968D /* Default.png */; };
+		B48B419C1715FBD50032968D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48B419B1715FBD50032968D /* Default@2x.png */; };
+		B48B419E1715FBD50032968D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48B419D1715FBD50032968D /* Default-568h@2x.png */; };
+		B48B41A11715FBD50032968D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48B419F1715FBD50032968D /* MainStoryboard.storyboard */; };
+		B48B41A41715FBD50032968D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41A31715FBD50032968D /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B48B41841715FBD50032968D /* ShiftUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B48B41871715FBD50032968D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B48B41891715FBD50032968D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B48B418B1715FBD50032968D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B48B418F1715FBD50032968D /* ShiftUp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShiftUp-Info.plist"; sourceTree = "<group>"; };
+		B48B41911715FBD50032968D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B48B41931715FBD50032968D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B48B41951715FBD50032968D /* ShiftUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShiftUp-Prefix.pch"; sourceTree = "<group>"; };
+		B48B41961715FBD50032968D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B48B41971715FBD50032968D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B48B41991715FBD50032968D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B48B419B1715FBD50032968D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B48B419D1715FBD50032968D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B48B41A01715FBD50032968D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B48B41A21715FBD50032968D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B48B41A31715FBD50032968D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B48B41811715FBD50032968D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48B41881715FBD50032968D /* UIKit.framework in Frameworks */,
+				B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */,
+				B48B418C1715FBD50032968D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B48B417B1715FBD50032968D = {
+			isa = PBXGroup;
+			children = (
+				B48B418D1715FBD50032968D /* ShiftUp */,
+				B48B41861715FBD50032968D /* Frameworks */,
+				B48B41851715FBD50032968D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B48B41851715FBD50032968D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B48B41841715FBD50032968D /* ShiftUp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B48B41861715FBD50032968D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B48B41871715FBD50032968D /* UIKit.framework */,
+				B48B41891715FBD50032968D /* Foundation.framework */,
+				B48B418B1715FBD50032968D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B48B418D1715FBD50032968D /* ShiftUp */ = {
+			isa = PBXGroup;
+			children = (
+				B48B41961715FBD50032968D /* AppDelegate.h */,
+				B48B41971715FBD50032968D /* AppDelegate.m */,
+				B48B419F1715FBD50032968D /* MainStoryboard.storyboard */,
+				B48B41A21715FBD50032968D /* ViewController.h */,
+				B48B41A31715FBD50032968D /* ViewController.m */,
+				B48B418E1715FBD50032968D /* Supporting Files */,
+			);
+			path = ShiftUp;
+			sourceTree = "<group>";
+		};
+		B48B418E1715FBD50032968D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B48B418F1715FBD50032968D /* ShiftUp-Info.plist */,
+				B48B41901715FBD50032968D /* InfoPlist.strings */,
+				B48B41931715FBD50032968D /* main.m */,
+				B48B41951715FBD50032968D /* ShiftUp-Prefix.pch */,
+				B48B41991715FBD50032968D /* Default.png */,
+				B48B419B1715FBD50032968D /* Default@2x.png */,
+				B48B419D1715FBD50032968D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B48B41831715FBD50032968D /* ShiftUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B48B41A71715FBD60032968D /* Build configuration list for PBXNativeTarget "ShiftUp" */;
+			buildPhases = (
+				B48B41801715FBD50032968D /* Sources */,
+				B48B41811715FBD50032968D /* Frameworks */,
+				B48B41821715FBD50032968D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShiftUp;
+			productName = ShiftUp;
+			productReference = B48B41841715FBD50032968D /* ShiftUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B48B417C1715FBD50032968D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = AFGE;
+			};
+			buildConfigurationList = B48B417F1715FBD50032968D /* Build configuration list for PBXProject "ShiftUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B48B417B1715FBD50032968D;
+			productRefGroup = B48B41851715FBD50032968D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B48B41831715FBD50032968D /* ShiftUp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B48B41821715FBD50032968D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48B41921715FBD50032968D /* InfoPlist.strings in Resources */,
+				B48B419A1715FBD50032968D /* Default.png in Resources */,
+				B48B419C1715FBD50032968D /* Default@2x.png in Resources */,
+				B48B419E1715FBD50032968D /* Default-568h@2x.png in Resources */,
+				B48B41A11715FBD50032968D /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B48B41801715FBD50032968D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B48B41941715FBD50032968D /* main.m in Sources */,
+				B48B41981715FBD50032968D /* AppDelegate.m in Sources */,
+				B48B41A41715FBD50032968D /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B48B41901715FBD50032968D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B48B41911715FBD50032968D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B48B419F1715FBD50032968D /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B48B41A01715FBD50032968D /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B48B41A51715FBD60032968D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B48B41A61715FBD60032968D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B48B41A81715FBD60032968D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShiftUp/ShiftUp-Prefix.pch";
+				INFOPLIST_FILE = "ShiftUp/ShiftUp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B48B41A91715FBD60032968D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShiftUp/ShiftUp-Prefix.pch";
+				INFOPLIST_FILE = "ShiftUp/ShiftUp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B48B417F1715FBD50032968D /* Build configuration list for PBXProject "ShiftUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B48B41A51715FBD60032968D /* Debug */,
+				B48B41A61715FBD60032968D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B48B41A71715FBD60032968D /* Build configuration list for PBXNativeTarget "ShiftUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B48B41A81715FBD60032968D /* Debug */,
+				B48B41A91715FBD60032968D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B48B417C1715FBD50032968D /* Project object */;
+}
