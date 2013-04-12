@@ -18,6 +18,7 @@
 		B48B419E1715FBD50032968D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B48B419D1715FBD50032968D /* Default-568h@2x.png */; };
 		B48B41A11715FBD50032968D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48B419F1715FBD50032968D /* MainStoryboard.storyboard */; };
 		B48B41A41715FBD50032968D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41A31715FBD50032968D /* ViewController.m */; };
+		B48B41AB1715FD640032968D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41AA1715FD640032968D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B48B41A01715FBD50032968D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		B48B41A21715FBD50032968D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B48B41A31715FBD50032968D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B48B41AA1715FD640032968D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48B41AB1715FD640032968D /* MapKit.framework in Frameworks */,
 				B48B41881715FBD50032968D /* UIKit.framework in Frameworks */,
 				B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */,
 				B48B418C1715FBD50032968D /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +59,7 @@
 		B48B417B1715FBD50032968D = {
 			isa = PBXGroup;
 			children = (
+				B48B41AA1715FD640032968D /* MapKit.framework */,
 				B48B418D1715FBD50032968D /* ShiftUp */,
 				B48B41861715FBD50032968D /* Frameworks */,
 				B48B41851715FBD50032968D /* Products */,

@@ -17,13 +17,64 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self startLocationUpdates];
+    
+    CLLocationCoordinate2D mmCoordinate =
+    {
+        .latitude = 41.894032f,
+        .longitude = -87.634742f
+    };
+    
+    //mmCoordinate.latitude = 41.894032f;
+    //mmCoordinate.longitude = -87.634742f;
+    
+    
+    MKCoordinateSpan span =
+    {
+        .latitudeDelta = 0.002f,
+        .longitudeDelta = 0.002f
+    };
+
+
+}
+
+#pragma mark - Location Manager Methods
+
+- (void)locationManager:(CLLocationManager *)manager
+	 didUpdateLocations:(NSArray *)locations
+{
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    if (error) {
+        NSLog(@"There was an error with Location Manager. Here is the error: %@", error);
+    }
+}
+
+-(void)startUpdatingLocation
+{
+
+}
+
+#pragma mark - Annotation Methods
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 @end
