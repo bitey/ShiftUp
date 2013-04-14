@@ -11,6 +11,15 @@
 
 @interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
+@property (strong, nonatomic) CLLocationManager *mrLocationManager;
 
+-(void)startUpdatingLocation;
+
+-(void)locationManager:(CLLocationManager *)manager
+	 didUpdateLocations:(NSArray *)locations;
+
+-(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate;
+
+-(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate;
 
 @end

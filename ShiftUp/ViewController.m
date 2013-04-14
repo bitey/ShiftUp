@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Annotation.h"
 
 @interface ViewController ()
+{
+    __weak IBOutlet MKMapView *mapViewOutlet;
+}
+@property (strong, nonatomic) Annotation *myAnnotation;
 
 @end
 
@@ -17,46 +22,80 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self startLocationUpdates];
+    self.myAnnotation = [[Annotation alloc]init];
+    self.mrLocationManager = [[CLLocationManager alloc]init];
+    [self.mrLocationManager startUpdatingLocation];
     
-    CLLocationCoordinate2D mmCoordinate =
+    
+    
+    CLLocationCoordinate2D testCoordinate =
     {
         .latitude = 41.894032f,
         .longitude = -87.634742f
     };
     
-    //mmCoordinate.latitude = 41.894032f;
-    //mmCoordinate.longitude = -87.634742f;
     
-    
-    MKCoordinateSpan span =
+    MKCoordinateSpan testSpan =
     {
         .latitudeDelta = 0.002f,
         .longitudeDelta = 0.002f
     };
-
-
+    
+    MKCoordinateRegion testRegion =
+    {
+        testCoordinate,
+        testSpan
+    };
+    
+    self.myAnnotation.title = @"Test Annotation";
+    self.myAnnotation.coordinate = testCoordinate;
+    self.myAnnotation.subtitle = @"This is a test, this is only a test";
+    
+    mapViewOutlet.region = testRegion;
+    [mapViewOutlet addAnnotation:self.myAnnotation];
 }
 
 #pragma mark - Location Manager Methods
 
+// if the location manager hasn't started, start it.
+// tell the location manager to start monitoring for significant changes
+-(void)startUpdatingLocation
+{
+    if (self.mrLocationManager == nil)
+    {
+        self.mrLocationManager = [[CLLocationManager alloc]init];
+    }
+    
+    self.mrLocationManager.delegate = self;
+    [self.mrLocationManager startMonitoringSignificantLocationChanges];
+    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+}
+
+//Method is from the CLLocationManager protocol
 - (void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations
+{
+    //
+    //
+    //Fix the locations array here, get the current location - I think its the last object
+    //
+    //
+    //
+    [self updatePersonalCoordinates:[locations lastObject]];
+}
+
+-(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate
 {
     
 }
 
+//Method is from the CLLocationManager protocol
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
 {
     if (error) {
         NSLog(@"There was an error with Location Manager. Here is the error: %@", error);
     }
-}
-
--(void)startUpdatingLocation
-{
-
 }
 
 #pragma mark - Annotation Methods

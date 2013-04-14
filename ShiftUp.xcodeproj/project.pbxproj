@@ -19,6 +19,7 @@
 		B48B41A11715FBD50032968D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48B419F1715FBD50032968D /* MainStoryboard.storyboard */; };
 		B48B41A41715FBD50032968D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41A31715FBD50032968D /* ViewController.m */; };
 		B48B41AB1715FD640032968D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41AA1715FD640032968D /* MapKit.framework */; };
+		B48B41B0171B09BA0032968D /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41AF171B09BA0032968D /* Annotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		B48B41A21715FBD50032968D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B48B41A31715FBD50032968D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B48B41AA1715FD640032968D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B48B41AE171B09BA0032968D /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		B48B41AF171B09BA0032968D /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				B48B419F1715FBD50032968D /* MainStoryboard.storyboard */,
 				B48B41A21715FBD50032968D /* ViewController.h */,
 				B48B41A31715FBD50032968D /* ViewController.m */,
+				B48B41AE171B09BA0032968D /* Annotation.h */,
+				B48B41AF171B09BA0032968D /* Annotation.m */,
 				B48B418E1715FBD50032968D /* Supporting Files */,
 			);
 			path = ShiftUp;
@@ -180,6 +185,7 @@
 				B48B41941715FBD50032968D /* main.m in Sources */,
 				B48B41981715FBD50032968D /* AppDelegate.m in Sources */,
 				B48B41A41715FBD50032968D /* ViewController.m in Sources */,
+				B48B41B0171B09BA0032968D /* Annotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +308,7 @@
 				B48B41A91715FBD60032968D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
