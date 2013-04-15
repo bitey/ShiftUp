@@ -75,18 +75,12 @@
 - (void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations
 {
-    //
-    //
-    //Fix the locations array here, get the current location - I think its the last object
-    //
-    //
-    //
-    [self updatePersonalCoordinates:[locations lastObject]];
+    [self updatePersonalCoordinates: ((CLLocation*)[locations lastObject]).coordinate];
 }
 
 -(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate
 {
-    
+    NSLog(@"updating coordinate with latitude: %f and longitude: %f", newCoordinate.latitude, newCoordinate.longitude);
 }
 
 //Method is from the CLLocationManager protocol
