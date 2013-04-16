@@ -25,9 +25,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.myAnnotation = [[Annotation alloc]init];
-
-    
     
     
     CLLocationCoordinate2D testCoordinate =

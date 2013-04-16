@@ -12,8 +12,6 @@
 
 @interface LocationManager : NSObject <CLLocationManagerDelegate>
 
-@property (strong, nonatomic) CLLocationManager *mrLocationManager;
-
 -(id)initWithCurrentLocationAndUpdates;
 -(void)startUpdatingLocation;
 

@@ -10,21 +10,21 @@
 
 @implementation LocationManager
 
--(id)initWithCurrentLocationAndUpdates
+-(id)initWithCurrentLocationFromLocationManager:(CLLocationManager*)manager
 {
 
-    self.mrLocationManager = [[CLLocationManager alloc]init];
-    self.mrLocationManager.delegate = self;
-    [self.mrLocationManager startMonitoringSignificantLocationChanges];
-    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    [self.mrLocationManager startUpdatingLocation];
-    
-    return self;
+//    self = [[CLLocationManager alloc]init];
+//    self.mrLocationManager.delegate = self;
+//    [self.mrLocationManager startMonitoringSignificantLocationChanges];
+//    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//    [self.mrLocationManager startUpdatingLocation];
+//    
+//    return self;
 }
 
 -(void)startUpdatingLocation
 {
-    [self.mrLocationManager startUpdatingLocation];
+//    [self.mrLocationManager startUpdatingLocation];
 }
 
 @end
