@@ -7,13 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "LocationManager.h"
 #import "Annotation.h"
 
 @interface ViewController ()
 {
     __weak IBOutlet MKMapView *mapViewOutlet;
 }
+
 @property (strong, nonatomic) Annotation *myAnnotation;
+
 
 @end
 
@@ -23,8 +26,7 @@
 {
     [super viewDidLoad];
     self.myAnnotation = [[Annotation alloc]init];
-    self.mrLocationManager = [[CLLocationManager alloc]init];
-    [self.mrLocationManager startUpdatingLocation];
+
     
     
     
@@ -61,18 +63,11 @@
 // tell the location manager to start monitoring for significant changes
 -(void)startUpdatingLocation
 {
-    if (self.mrLocationManager == nil)
-    {
-        self.mrLocationManager = [[CLLocationManager alloc]init];
-    }
-    
-    self.mrLocationManager.delegate = self;
-    [self.mrLocationManager startMonitoringSignificantLocationChanges];
-    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+
 }
 
-//Method is from the CLLocationManager protocol
-- (void)locationManager:(CLLocationManager *)manager
+
+-(void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations
 {
     [self updatePersonalCoordinates: ((CLLocation*)[locations lastObject]).coordinate];
@@ -83,8 +78,13 @@
     NSLog(@"updating coordinate with latitude: %f and longitude: %f", newCoordinate.latitude, newCoordinate.longitude);
 }
 
-//Method is from the CLLocationManager protocol
-- (void)locationManager:(CLLocationManager *)manager
+
+-(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate
+{
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
 {
     if (error) {
@@ -99,12 +99,12 @@
     
 }
 
-- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
     
 }
 
-- (void)didReceiveMemoryWarning
+-(void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
 

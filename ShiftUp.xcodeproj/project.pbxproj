@@ -20,6 +20,7 @@
 		B48B41A41715FBD50032968D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41A31715FBD50032968D /* ViewController.m */; };
 		B48B41AB1715FD640032968D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41AA1715FD640032968D /* MapKit.framework */; };
 		B48B41B0171B09BA0032968D /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41AF171B09BA0032968D /* Annotation.m */; };
+		B48B41B5171C85FF0032968D /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41B4171C85FF0032968D /* LocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		B48B41AA1715FD640032968D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B48B41AE171B09BA0032968D /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
 		B48B41AF171B09BA0032968D /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		B48B41B3171C85FF0032968D /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		B48B41B4171C85FF0032968D /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,7 @@
 		B48B418D1715FBD50032968D /* ShiftUp */ = {
 			isa = PBXGroup;
 			children = (
+				B48B41B6171C86420032968D /* Managers */,
 				B48B41961715FBD50032968D /* AppDelegate.h */,
 				B48B41971715FBD50032968D /* AppDelegate.m */,
 				B48B419F1715FBD50032968D /* MainStoryboard.storyboard */,
@@ -114,6 +118,15 @@
 				B48B419D1715FBD50032968D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B48B41B6171C86420032968D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B48B41B3171C85FF0032968D /* LocationManager.h */,
+				B48B41B4171C85FF0032968D /* LocationManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +199,7 @@
 				B48B41981715FBD50032968D /* AppDelegate.m in Sources */,
 				B48B41A41715FBD50032968D /* ViewController.m in Sources */,
 				B48B41B0171B09BA0032968D /* Annotation.m in Sources */,
+				B48B41B5171C85FF0032968D /* LocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

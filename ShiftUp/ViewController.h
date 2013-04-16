@@ -9,17 +9,19 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
-
-@property (strong, nonatomic) CLLocationManager *mrLocationManager;
+@interface ViewController : UIViewController <MKMapViewDelegate>
 
 -(void)startUpdatingLocation;
 
 -(void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations;
 
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error;
+
 -(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate;
 
 -(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate;
+
 
 @end
