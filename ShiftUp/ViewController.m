@@ -27,10 +27,10 @@
     [super viewDidLoad];
 
     self.myAnnotation = [[Annotation alloc]init];
-    self.mrLocationManager = [[CLLocationManager alloc]init];
-    self.mrLocationManager.delegate = self;
-    [self.mrLocationManager startUpdatingLocation];
-    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+//    self.mrLocationManager = [[CLLocationManager alloc]init];
+//    self.mrLocationManager.delegate = self;
+//    [self.mrLocationManager startUpdatingLocation];
+//    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
 
     
     
@@ -63,13 +63,6 @@
 
 #pragma mark - Location Manager Methods
 
-// if the location manager hasn't started, start it.
-// tell the location manager to start monitoring for significant changes
--(void)startUpdatingLocation
-{
-
-}
-
 
 -(void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations
@@ -98,10 +91,10 @@
 
 #pragma mark - Annotation Methods
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
-{
-    
-}
+//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+//{
+//    
+//}
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {

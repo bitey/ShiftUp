@@ -12,7 +12,7 @@
 
 @interface LocationManager : NSObject <CLLocationManagerDelegate>
 
--(id)initWithCurrentLocationAndUpdates;
+-(id)initWithCurrentLocationFromLocationManager:(CLLocationManager*)manager;
 -(void)startUpdatingLocation;
 
 @end

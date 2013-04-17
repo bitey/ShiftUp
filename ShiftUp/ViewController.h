@@ -10,20 +10,19 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface ViewController : UIViewController <MKMapViewDelegate>
 
-
--(void)startUpdatingLocation;
 
 -(void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations;
-
-- (void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error;
 
 -(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate;
 
 -(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate;
 
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error;
+
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
 
 @end
