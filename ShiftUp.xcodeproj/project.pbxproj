@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EC4349B171EB1A800353E26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC4349A171EB1A800353E26 /* CoreLocation.framework */; };
 		B48B41881715FBD50032968D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41871715FBD50032968D /* UIKit.framework */; };
 		B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41891715FBD50032968D /* Foundation.framework */; };
 		B48B418C1715FBD50032968D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B418B1715FBD50032968D /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5EC4349A171EB1A800353E26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B48B41841715FBD50032968D /* ShiftUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48B41871715FBD50032968D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B48B41891715FBD50032968D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC4349B171EB1A800353E26 /* CoreLocation.framework in Frameworks */,
 				B48B41AB1715FD640032968D /* MapKit.framework in Frameworks */,
 				B48B41881715FBD50032968D /* UIKit.framework in Frameworks */,
 				B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */,
@@ -62,9 +65,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E78E6FB171DB46300157C13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B48B419F1715FBD50032968D /* MainStoryboard.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5E78E6FC171DB46A00157C13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B48B41961715FBD50032968D /* AppDelegate.h */,
+				B48B41971715FBD50032968D /* AppDelegate.m */,
+				B48B41A21715FBD50032968D /* ViewController.h */,
+				B48B41A31715FBD50032968D /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		B48B417B1715FBD50032968D = {
 			isa = PBXGroup;
 			children = (
+				5EC4349A171EB1A800353E26 /* CoreLocation.framework */,
 				B48B41AA1715FD640032968D /* MapKit.framework */,
 				B48B418D1715FBD50032968D /* ShiftUp */,
 				B48B41861715FBD50032968D /* Frameworks */,
@@ -93,14 +116,9 @@
 		B48B418D1715FBD50032968D /* ShiftUp */ = {
 			isa = PBXGroup;
 			children = (
-				B48B41B6171C86420032968D /* Managers */,
-				B48B41961715FBD50032968D /* AppDelegate.h */,
-				B48B41971715FBD50032968D /* AppDelegate.m */,
-				B48B419F1715FBD50032968D /* MainStoryboard.storyboard */,
-				B48B41A21715FBD50032968D /* ViewController.h */,
-				B48B41A31715FBD50032968D /* ViewController.m */,
-				B48B41AE171B09BA0032968D /* Annotation.h */,
-				B48B41AF171B09BA0032968D /* Annotation.m */,
+				B48B41B6171C86420032968D /* Models */,
+				5E78E6FB171DB46300157C13 /* Views */,
+				5E78E6FC171DB46A00157C13 /* Controllers */,
 				B48B418E1715FBD50032968D /* Supporting Files */,
 			);
 			path = ShiftUp;
@@ -120,13 +138,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B48B41B6171C86420032968D /* Managers */ = {
+		B48B41B6171C86420032968D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B48B41AE171B09BA0032968D /* Annotation.h */,
+				B48B41AF171B09BA0032968D /* Annotation.m */,
 				B48B41B3171C85FF0032968D /* LocationManager.h */,
 				B48B41B4171C85FF0032968D /* LocationManager.m */,
 			);
-			name = Managers;
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
