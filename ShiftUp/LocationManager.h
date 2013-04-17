@@ -12,7 +12,16 @@
 
 @interface LocationManager : NSObject <CLLocationManagerDelegate>
 
--(id)initWithCurrentLocationFromLocationManager:(CLLocationManager*)manager;
--(void)startUpdatingLocation;
+@property (strong, nonatomic) CLLocationManager *mrLocationManager;
+
+-(LocationManager*)init;
+
+- (void)locationManager:(CLLocationManager *)manager
+	 didUpdateLocations:(NSArray *)locations;
+
+-(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate;
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error;
 
 @end

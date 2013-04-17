@@ -10,22 +10,32 @@
 
 @implementation LocationManager
 
--(id)initWithCurrentLocationFromLocationManager:(CLLocationManager*)manager
+-(id)init
 {
-
-//    self.mrLocationManager = [[CLLocationManager alloc]init];
-//    self.mrLocationManager.delegate = self;
-//    [self.mrLocationManager startMonitoringSignificantLocationChanges];
-//    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
-//    [self.mrLocationManager startUpdatingLocation];
-    
+    if(self = [super init])
+    {
+        self.mrLocationManager = [[CLLocationManager alloc]init];
+        self.mrLocationManager.delegate = self;
+        [self.mrLocationManager startUpdatingLocation];
+    }
     return self;
-
 }
 
--(void)startUpdatingLocation
+- (void)locationManager:(CLLocationManager *)manager
+	 didUpdateLocations:(NSArray *)locations
 {
-//    [self.mrLocationManager startUpdatingLocation];
+    [self updatePersonalCoordinates: ((CLLocation*)[locations lastObject]).coordinate];
+}
+
+-(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate
+{
+    NSLog(@"updating coordinate with latitude: %f and longitude: %f", newCoordinate.latitude, newCoordinate.longitude);
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error
+{
+    
 }
 
 @end

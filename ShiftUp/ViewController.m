@@ -16,7 +16,7 @@
 }
 
 @property (strong, nonatomic) Annotation *myAnnotation;
-@property (strong, nonatomic) CLLocationManager *mrLocationManager;
+@property (strong, nonatomic) LocationManager *missLocationManager;
 
 @end
 
@@ -25,7 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.missLocationManager = [[LocationManager alloc]init];
     self.myAnnotation = [[Annotation alloc]init];
 //    self.mrLocationManager = [[CLLocationManager alloc]init];
 //    self.mrLocationManager.delegate = self;
