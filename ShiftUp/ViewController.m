@@ -16,7 +16,7 @@
 }
 
 @property (strong, nonatomic) Annotation *myAnnotation;
-
+@property (strong, nonatomic) CLLocationManager *mrLocationManager;
 
 @end
 
@@ -25,6 +25,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.myAnnotation = [[Annotation alloc]init];
+    self.mrLocationManager = [[CLLocationManager alloc]init];
+    self.mrLocationManager.delegate = self;
+    [self.mrLocationManager startUpdatingLocation];
+    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+
     
     
     CLLocationCoordinate2D testCoordinate =

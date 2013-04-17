@@ -13,13 +13,14 @@
 -(id)initWithCurrentLocationFromLocationManager:(CLLocationManager*)manager
 {
 
-//    self = [[CLLocationManager alloc]init];
+//    self.mrLocationManager = [[CLLocationManager alloc]init];
 //    self.mrLocationManager.delegate = self;
 //    [self.mrLocationManager startMonitoringSignificantLocationChanges];
 //    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
 //    [self.mrLocationManager startUpdatingLocation];
-//    
-//    return self;
+    
+    return self;
+
 }
 
 -(void)startUpdatingLocation
