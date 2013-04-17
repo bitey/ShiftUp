@@ -16,7 +16,8 @@
     {
         self.mrLocationManager = [[CLLocationManager alloc]init];
         self.mrLocationManager.delegate = self;
-        [self.mrLocationManager startUpdatingLocation];
+        self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        [self.mrLocationManager startMonitoringSignificantLocationChanges];
     }
     return self;
 }
@@ -29,6 +30,8 @@
 
 -(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate
 {
+    self.mostRecentCoordinate = newCoordinate;
+    [self.delegate createMapRegionAndSpanWithCoordinate:self.mostRecentCoordinate];
     NSLog(@"updating coordinate with latitude: %f and longitude: %f", newCoordinate.latitude, newCoordinate.longitude);
 }
 

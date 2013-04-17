@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "LocationManager.h"
 
-@interface ViewController : UIViewController <MKMapViewDelegate>
+@interface ViewController : UIViewController <MKMapViewDelegate, LocationManagerDelegate>
 
--(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate;
-
-- (void)locationManager:(CLLocationManager *)manager
+-(void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error;
+
+-(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
+
+-(void)createAnnotationAndAddToMapView;
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
 

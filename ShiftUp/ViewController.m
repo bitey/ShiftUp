@@ -26,48 +26,8 @@
 {
     [super viewDidLoad];
     self.missLocationManager = [[LocationManager alloc]init];
+    self.missLocationManager.delegate = self;
     self.myAnnotation = [[Annotation alloc]init];
-//    self.mrLocationManager = [[CLLocationManager alloc]init];
-//    self.mrLocationManager.delegate = self;
-//    [self.mrLocationManager startUpdatingLocation];
-//    self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
-
-    
-    
-    CLLocationCoordinate2D testCoordinate =
-    {
-        .latitude = 41.894032f,
-        .longitude = -87.634742f
-    };
-    
-    
-    MKCoordinateSpan testSpan =
-    {
-        .latitudeDelta = 0.002f,
-        .longitudeDelta = 0.002f
-    };
-    
-    MKCoordinateRegion testRegion =
-    {
-        testCoordinate,
-        testSpan
-    };
-    
-    self.myAnnotation.title = @"Test Annotation";
-    self.myAnnotation.coordinate = testCoordinate;
-    self.myAnnotation.subtitle = @"This is a test, this is only a test";
-    
-    mapViewOutlet.region = testRegion;
-    [mapViewOutlet addAnnotation:self.myAnnotation];
-}
-
-#pragma mark - Location Manager Methods
-
-
-
--(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate
-{
-    
 }
 
 -(void)locationManager:(CLLocationManager *)manager
@@ -80,7 +40,40 @@
 
 #pragma mark - Annotation Methods
 
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+-(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate
+{
+    CLLocationCoordinate2D currentCoordinate =
+    {
+        .latitude = mostRecentCoordinate.latitude,
+        .longitude = mostRecentCoordinate.longitude
+    };
+    
+    
+    MKCoordinateSpan currentSpan =
+    {
+        .latitudeDelta = 0.002f,
+        .longitudeDelta = 0.002f
+    };
+    
+    MKCoordinateRegion currentRegion =
+    {
+        currentCoordinate,
+        currentSpan
+    };
+
+    mapViewOutlet.region = currentRegion;
+}
+
+-(void)createAnnotationAndAddToMapView
+{
+    self.myAnnotation.title = @"Test Annotation";
+    self.myAnnotation.coordinate = self.missLocationManager.mostRecentCoordinate;
+    self.myAnnotation.subtitle = @"This is a test, this is only a test";
+    
+    [mapViewOutlet addAnnotation:self.myAnnotation];
+}
+
+//-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 //{
 //    
 //}

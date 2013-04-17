@@ -10,9 +10,20 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
+@protocol LocationManagerDelegate <NSObject>
+
+@optional
+
+-(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
+
+@end
+
+
 @interface LocationManager : NSObject <CLLocationManagerDelegate>
 
+@property (strong, nonatomic) id <LocationManagerDelegate> delegate;
 @property (strong, nonatomic) CLLocationManager *mrLocationManager;
+@property (assign, nonatomic) CLLocationCoordinate2D mostRecentCoordinate;
 
 -(LocationManager*)init;
 
