@@ -64,17 +64,6 @@
 #pragma mark - Location Manager Methods
 
 
--(void)locationManager:(CLLocationManager *)manager
-	 didUpdateLocations:(NSArray *)locations
-{
-    [self updatePersonalCoordinates: ((CLLocation*)[locations lastObject]).coordinate];
-}
-
--(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate
-{
-    NSLog(@"updating coordinate with latitude: %f and longitude: %f", newCoordinate.latitude, newCoordinate.longitude);
-}
-
 
 -(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate
 {

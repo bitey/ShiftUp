@@ -12,12 +12,6 @@
 
 @interface ViewController : UIViewController <MKMapViewDelegate>
 
-
--(void)locationManager:(CLLocationManager *)manager
-	 didUpdateLocations:(NSArray *)locations;
-
--(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate;
-
 -(void)updateMapViewWithNewCenter:(CLLocationCoordinate2D)newCoordinate;
 
 - (void)locationManager:(CLLocationManager *)manager
