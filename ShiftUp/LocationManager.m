@@ -35,7 +35,7 @@
     {
         [self.mrLocationManager stopUpdatingLocation];
         [self.mrLocationManager startMonitoringSignificantLocationChanges];
-        [self.delegate createMapRegionAndSpanWithCoordinate:self.mostRecentCoordinate];
+        [self.delegate hasCurrentCoordinate:self.mostRecentCoordinate];
         NSLog(@"updating coordinate with latitude: %f and longitude: %f", self.mostRecentCoordinate.latitude, self.mostRecentCoordinate.longitude);
 
     }
@@ -44,7 +44,7 @@
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
 {
-    
+    NSLog(@"This just happened: %@", error);
 }
 
 @end

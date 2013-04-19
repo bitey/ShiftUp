@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "LocationManager.h"
 #import "Annotation.h"
+#import "APIManager.h"
+
 
 @interface ViewController ()
 {
@@ -17,6 +19,9 @@
 
 @property (strong, nonatomic) Annotation *myAnnotation;
 @property (strong, nonatomic) LocationManager *missLocationManager;
+@property (strong, nonatomic) APIManager *eventAPIManager;
+@property (assign, nonatomic) CLLocationCoordinate2D currentCoordinate;
+@property (strong, nonatomic) Event *afgeEvent;
 
 @end
 
@@ -28,17 +33,40 @@
     self.missLocationManager = [[LocationManager alloc]init];
     self.missLocationManager.delegate = self;
     self.myAnnotation = [[Annotation alloc]init];
+    
+    //////////////////////////////////////////////////
+    //
+    //
+    //Added for demo
+    //
+    //
+    self.afgeEvent = [[Event alloc]init];
+    self.afgeEvent.title = @"Paul's super Awesome Event";
+    CLLocationCoordinate2D eventCoordinate =
+    {
+        .latitude = 38.897234,
+        .longitude = -77.010646
+    };
+    self.afgeEvent.coordinate = eventCoordinate;
+    self.afgeEvent.subtitle = @"This is where Paul will be demoing all the features";
+    [self createAnnotationFromEvent:self.afgeEvent];
+    
+    
+    
+    
 }
 
--(void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error
+#pragma mark - Creating the Map Methods
+
+-(void)hasCurrentCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate
 {
-    if (error) {
-        NSLog(@"There was an error with Location Manager. Here is the error: %@", error);
-    }
+    self.currentCoordinate = mostRecentCoordinate;
+    self.eventAPIManager = [[APIManager alloc]initWithNewCoordinates:self.currentCoordinate];
+    [self createMapRegionAndSpanWithCoordinate:self.currentCoordinate];
+    [self.eventAPIManager connectToAFGEAndTellDelegates];
+    
 }
 
-#pragma mark - Annotation Methods
 
 -(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate
 {
@@ -64,11 +92,11 @@
     mapViewOutlet.region = currentRegion;
 }
 
--(void)createAnnotationAndAddToMapView
+-(void)createAnnotationFromEvent:(Event*)event
 {
-    self.myAnnotation.title = @"Test Annotation";
-    self.myAnnotation.coordinate = self.missLocationManager.mostRecentCoordinate;
-    self.myAnnotation.subtitle = @"This is a test, this is only a test";
+    self.myAnnotation.title = event.title;
+    self.myAnnotation.coordinate = event.coordinate;
+    self.myAnnotation.subtitle = event.subtitle;
     
     [mapViewOutlet addAnnotation:self.myAnnotation];
 }

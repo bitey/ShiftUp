@@ -14,7 +14,7 @@
 
 @optional
 
--(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
+-(void)hasCurrentCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
 
 @end
 

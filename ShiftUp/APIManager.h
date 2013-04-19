@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @protocol APIManagerDelegate <NSObject>
 
@@ -17,5 +18,9 @@
 @end
 
 @interface APIManager : NSObject
+
+-(APIManager*)initWithNewCoordinates:(CLLocationCoordinate2D)newCoordinates;
+
+-(void)connectToAFGEAndTellDelegates;
 
 @end

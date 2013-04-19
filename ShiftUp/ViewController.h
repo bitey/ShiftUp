@@ -10,15 +10,13 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "LocationManager.h"
+#import "Event.h"
 
 @interface ViewController : UIViewController <MKMapViewDelegate, LocationManagerDelegate>
 
--(void)locationManager:(CLLocationManager *)manager
-       didFailWithError:(NSError *)error;
-
 -(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
 
--(void)createAnnotationAndAddToMapView;
+-(void)createAnnotationFromEvent:(Event*)event;
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view;
 

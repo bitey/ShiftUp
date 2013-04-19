@@ -23,6 +23,7 @@
 		B48B41AB1715FD640032968D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41AA1715FD640032968D /* MapKit.framework */; };
 		B48B41B0171B09BA0032968D /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41AF171B09BA0032968D /* Annotation.m */; };
 		B48B41B5171C85FF0032968D /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41B4171C85FF0032968D /* LocationManager.m */; };
+		B48B41C0172194D00032968D /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41BF172194D00032968D /* Event.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		B48B41AF171B09BA0032968D /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
 		B48B41B3171C85FF0032968D /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		B48B41B4171C85FF0032968D /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		B48B41BE172194D00032968D /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		B48B41BF172194D00032968D /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				B48B41B4171C85FF0032968D /* LocationManager.m */,
 				5EC434A41720A31A00353E26 /* APIManager.h */,
 				5EC434A51720A31A00353E26 /* APIManager.m */,
+				B48B41BE172194D00032968D /* Event.h */,
+				B48B41BF172194D00032968D /* Event.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				B48B41B0171B09BA0032968D /* Annotation.m in Sources */,
 				B48B41B5171C85FF0032968D /* LocationManager.m in Sources */,
 				5EC434A61720A31A00353E26 /* APIManager.m in Sources */,
+				B48B41C0172194D00032968D /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
