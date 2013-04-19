@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5EC4349B171EB1A800353E26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC4349A171EB1A800353E26 /* CoreLocation.framework */; };
+		5EC434A61720A31A00353E26 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC434A51720A31A00353E26 /* APIManager.m */; };
 		B48B41881715FBD50032968D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41871715FBD50032968D /* UIKit.framework */; };
 		B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41891715FBD50032968D /* Foundation.framework */; };
 		B48B418C1715FBD50032968D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B418B1715FBD50032968D /* CoreGraphics.framework */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		5EC4349A171EB1A800353E26 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5EC434A41720A31A00353E26 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		5EC434A51720A31A00353E26 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		B48B41841715FBD50032968D /* ShiftUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48B41871715FBD50032968D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B48B41891715FBD50032968D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,6 +148,8 @@
 				B48B41AF171B09BA0032968D /* Annotation.m */,
 				B48B41B3171C85FF0032968D /* LocationManager.h */,
 				B48B41B4171C85FF0032968D /* LocationManager.m */,
+				5EC434A41720A31A00353E26 /* APIManager.h */,
+				5EC434A51720A31A00353E26 /* APIManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				B48B41A41715FBD50032968D /* ViewController.m in Sources */,
 				B48B41B0171B09BA0032968D /* Annotation.m in Sources */,
 				B48B41B5171C85FF0032968D /* LocationManager.m in Sources */,
+				5EC434A61720A31A00353E26 /* APIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

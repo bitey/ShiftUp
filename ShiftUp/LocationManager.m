@@ -17,7 +17,7 @@
         self.mrLocationManager = [[CLLocationManager alloc]init];
         self.mrLocationManager.delegate = self;
         self.mrLocationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        [self.mrLocationManager startMonitoringSignificantLocationChanges];
+        [self.mrLocationManager startUpdatingLocation];
     }
     return self;
 }
@@ -25,15 +25,21 @@
 - (void)locationManager:(CLLocationManager *)manager
 	 didUpdateLocations:(NSArray *)locations
 {
-    [self updatePersonalCoordinates: ((CLLocation*)[locations lastObject]).coordinate];
+    [self updatePersonalCoordinates: (CLLocation*)[locations lastObject]];
 }
 
--(void)updatePersonalCoordinates:(CLLocationCoordinate2D)newCoordinate
+-(void)updatePersonalCoordinates:(CLLocation*)newLocation
 {
-    self.mostRecentCoordinate = newCoordinate;
-    [self.delegate createMapRegionAndSpanWithCoordinate:self.mostRecentCoordinate];
-    NSLog(@"updating coordinate with latitude: %f and longitude: %f", newCoordinate.latitude, newCoordinate.longitude);
-}
+    self.mostRecentCoordinate = newLocation.coordinate;
+    if ([newLocation.timestamp timeIntervalSinceDate:[NSDate date]]< 15)
+    {
+        [self.mrLocationManager stopUpdatingLocation];
+        [self.mrLocationManager startMonitoringSignificantLocationChanges];
+        [self.delegate createMapRegionAndSpanWithCoordinate:self.mostRecentCoordinate];
+        NSLog(@"updating coordinate with latitude: %f and longitude: %f", self.mostRecentCoordinate.latitude, self.mostRecentCoordinate.longitude);
+
+    }
+    }
 
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
