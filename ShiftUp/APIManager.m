@@ -38,7 +38,7 @@
                                                  NSDictionary *jsonDictionary = [[NSDictionary alloc]init];
                                                  NSArray *eventResults = [[NSArray alloc]init];
                                                  NSMutableArray *allNearbyEvents = [[NSMutableArray alloc]init];
-                                                 NSArray *eventMetaData = [[NSArray alloc]init];
+
                                                  if (theirError)
                                                  {
                                                      NSLog(@"%@", theirError);
