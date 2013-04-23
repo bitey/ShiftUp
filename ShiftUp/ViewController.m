@@ -30,7 +30,7 @@
     [super viewDidLoad];
     self.missLocationManager = [[LocationManager alloc]init];
     self.missLocationManager.delegate = self;
-    self.myAnnotation = [[Annotation alloc]init];
+    //self.myAnnotation = [[Annotation alloc]init];
     
     
     //////////////////////////////////////////////////
@@ -101,10 +101,10 @@
 
 -(void)createAnnotationFromEvent:(Event*)event
 {
-    self.myAnnotation.title = event.title;
-    self.myAnnotation.coordinate = event.coordinate;
-    self.myAnnotation.subtitle = event.subtitle;
-    
+    self.myAnnotation = [[Annotation alloc] initWithLatitude:event.latitude
+                                                andLongitude:event.longitude
+                                                    andTitle:event.title
+                                                 andSubTitle:event.subtitle];
     [mapViewOutlet addAnnotation:self.myAnnotation];
 }
 

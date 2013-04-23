@@ -15,4 +15,9 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *subtitle;
 
+-(id)initWithLatitude:(float)latitude
+         andLongitude:(float)longitude
+             andTitle:(NSString*)titleString
+          andSubTitle:(NSString*)subtitleString;
+
 @end
