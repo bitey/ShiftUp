@@ -10,16 +10,17 @@
 #import "Annotation.h"
 
 
+
 @interface ViewController ()
 {
     __weak IBOutlet MKMapView *mapViewOutlet;
 }
 
-@property (strong, nonatomic) Annotation *myAnnotation;
-@property (strong, nonatomic) LocationManager *missLocationManager;
 @property (strong, nonatomic) APIManager *eventAPIManager;
+@property (strong, nonatomic) Annotation *myAnnotation;
 @property (assign, nonatomic) CLLocationCoordinate2D currentCoordinate;
-@property (strong, nonatomic) Event *afgeEvent;
+@property (strong, nonatomic) GeocodingManager *missGeocodingManager;
+@property (strong, nonatomic) LocationManager *missLocationManager;
 
 @end
 
@@ -29,29 +30,12 @@
 {
     [super viewDidLoad];
     self.missLocationManager = [[LocationManager alloc]init];
+    self.missGeocodingManager = [[GeocodingManager alloc]init];
+    
     self.missLocationManager.delegate = self;
-    //self.myAnnotation = [[Annotation alloc]init];
     
-    
-    //////////////////////////////////////////////////
-    //
-    //
-    //Added for demo
-    //
-    //
-//    self.afgeEvent = [[Event alloc]init];
-//    self.afgeEvent.title = @"Paul's super Awesome Event";
-//    CLLocationCoordinate2D eventCoordinate =
-//    {
-//        .latitude = 38.897234,
-//        .longitude = -77.010646
-//    };
-//    self.afgeEvent.coordinate = eventCoordinate;
-//    self.afgeEvent.subtitle = @"This is where Paul will be demoing all the features";
-//    [self createAnnotationFromEvent:self.afgeEvent];
-    
-    
-    
+    self.missGeocodingManager.delegate = self;
+    [self.missGeocodingManager convertToPlacemarksFromString:@"1231 t st, nw washington dc"];
     
 }
 
@@ -65,6 +49,11 @@
     [self createMapRegionAndSpanWithCoordinate:self.currentCoordinate];
     [self.eventAPIManager connectToAFGEAndTellDelegates];
     
+}
+
+-(void)hasReceivedSearchCoordinates:(CLPlacemark *)placemark
+{
+    NSLog(@"Placemark coordinate is --------------- %f", placemark.location.coordinate.longitude);
 }
 
 -(void)hasReceivedNearbyEvents:(NSMutableArray *)nearbyEvents
@@ -119,10 +108,10 @@
     return myAnnotationView;
 }
 
-//-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
-//{
-//    
-//}
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    
+}
 
 -(void)didReceiveMemoryWarning
 {

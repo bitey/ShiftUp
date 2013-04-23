@@ -9,14 +9,18 @@
 #import "APIManager.h"
 #import <CoreLocation/CoreLocation.h>
 #import "Event.h"
+#import "GeocodingManager.h"
 #import "LocationManager.h"
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
 
 
-@interface ViewController : UIViewController <MKMapViewDelegate, MKAnnotation, LocationManagerDelegate, APIManagerDelegate>
+
+@interface ViewController : UIViewController <MKMapViewDelegate, MKAnnotation, LocationManagerDelegate, APIManagerDelegate, GeocodingManagerDelegate>
 
 -(void)hasCurrentCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
+
+-(void)hasReceivedSearchCoordinates:(CLPlacemark *)placemark;
 
 -(void)hasReceivedNearbyEvents:(NSMutableArray *)nearbyEvents;
 
