@@ -69,8 +69,8 @@
                                                     currentEvent.endDate = [[eventResults objectAtIndex:i] objectAtIndex:7];
                                                     //currentEvent.active = [eventResults objectAtIndex:i];
                                                     [allNearbyEvents addObject:currentEvent];
-                                                    NSLog(@"current events: %@", allNearbyEvents);
                                                  }
+                                            [self.delegate hasReceivedNearbyEvents:allNearbyEvents];
                                              }];
 }
 

@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "LocationManager.h"
 #import "Annotation.h"
-#import "APIManager.h"
 
 
 @interface ViewController ()
@@ -34,22 +32,23 @@
     self.missLocationManager.delegate = self;
     self.myAnnotation = [[Annotation alloc]init];
     
+    
     //////////////////////////////////////////////////
     //
     //
     //Added for demo
     //
     //
-    self.afgeEvent = [[Event alloc]init];
-    self.afgeEvent.title = @"Paul's super Awesome Event";
-    CLLocationCoordinate2D eventCoordinate =
-    {
-        .latitude = 38.897234,
-        .longitude = -77.010646
-    };
-    self.afgeEvent.coordinate = eventCoordinate;
-    self.afgeEvent.subtitle = @"This is where Paul will be demoing all the features";
-    [self createAnnotationFromEvent:self.afgeEvent];
+//    self.afgeEvent = [[Event alloc]init];
+//    self.afgeEvent.title = @"Paul's super Awesome Event";
+//    CLLocationCoordinate2D eventCoordinate =
+//    {
+//        .latitude = 38.897234,
+//        .longitude = -77.010646
+//    };
+//    self.afgeEvent.coordinate = eventCoordinate;
+//    self.afgeEvent.subtitle = @"This is where Paul will be demoing all the features";
+//    [self createAnnotationFromEvent:self.afgeEvent];
     
     
     
@@ -62,11 +61,19 @@
 {
     self.currentCoordinate = mostRecentCoordinate;
     self.eventAPIManager = [[APIManager alloc]initWithNewCoordinates:self.currentCoordinate];
+    self.eventAPIManager.delegate = self;
     [self createMapRegionAndSpanWithCoordinate:self.currentCoordinate];
     [self.eventAPIManager connectToAFGEAndTellDelegates];
     
 }
 
+-(void)hasReceivedNearbyEvents:(NSMutableArray *)nearbyEvents
+{
+    for (int i = 0; i < nearbyEvents.count; i++)
+    {
+        [self createAnnotationFromEvent: [nearbyEvents objectAtIndex:i]];
+    }
+}
 
 -(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate
 {
@@ -101,15 +108,21 @@
     [mapViewOutlet addAnnotation:self.myAnnotation];
 }
 
-//-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    MKAnnotationView *myAnnotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"myAnnotation"];
+    
+    if (myAnnotationView == nil) {
+        myAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
+    }
+
+    return myAnnotationView;
+}
+
+//-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 //{
 //    
 //}
-
--(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
-{
-    
-}
 
 -(void)didReceiveMemoryWarning
 {

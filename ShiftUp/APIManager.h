@@ -13,11 +13,13 @@
 
 @optional
 
--(void)hasReceivedNearbyEvents;
+-(void)hasReceivedNearbyEvents:(NSMutableArray*)nearbyEvents;
 
 @end
 
 @interface APIManager : NSObject
+
+@property (strong, nonatomic) id <APIManagerDelegate> delegate;
 
 -(APIManager*)initWithNewCoordinates:(CLLocationCoordinate2D)newCoordinates;
 
