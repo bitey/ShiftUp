@@ -36,7 +36,6 @@
     self.missLocationManager.delegate = self;
     
     self.missGeocodingManager.delegate = self;
-    [self.missGeocodingManager convertToPlacemarksFromString:@"1231 t st, nw washington dc"];
     
 }
 
@@ -54,7 +53,7 @@
 
 -(void)hasReceivedSearchCoordinates:(CLPlacemark *)placemark
 {
-    NSLog(@"Placemark coordinate is --------------- %f", placemark.location.coordinate.longitude);
+    [self createMapRegionAndSpanWithCoordinate:placemark.location.coordinate];
 }
 
 -(void)hasReceivedNearbyEvents:(NSMutableArray *)nearbyEvents
@@ -76,8 +75,8 @@
     
     MKCoordinateSpan currentSpan =
     {
-        .latitudeDelta = 0.002f,
-        .longitudeDelta = 0.002f
+        .latitudeDelta = 0.2f,
+        .longitudeDelta = 0.2f
     };
     
     MKCoordinateRegion currentRegion =
@@ -100,15 +99,15 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [searchBar resignFirstResponder];
+    
     NSLog(@"return button pressed");
     
 }
 
-//This method isn't working correctly.
-//It should resign the first responder
+
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
 {
-    [searchBar resignFirstResponder];
+    [self.missGeocodingManager convertToPlacemarksFromString:searchBar.text];
     NSLog(@"search bar should end editing");
     return YES;
     
