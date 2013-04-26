@@ -22,6 +22,7 @@
 @property (assign, nonatomic) CLLocationCoordinate2D currentCoordinate;
 @property (strong, nonatomic) GeocodingManager *missGeocodingManager;
 @property (strong, nonatomic) LocationManager *missLocationManager;
+@property (assign, nonatomic) float zoomMultiplier;
 
 @end
 
@@ -32,6 +33,7 @@
     [super viewDidLoad];
     self.missLocationManager = [[LocationManager alloc]init];
     self.missGeocodingManager = [[GeocodingManager alloc]init];
+    self.zoomMultiplier = 1;
     
     self.missLocationManager.delegate = self;
     
@@ -75,8 +77,8 @@
     
     MKCoordinateSpan currentSpan =
     {
-        .latitudeDelta = 0.2f,
-        .longitudeDelta = 0.2f
+        .latitudeDelta = (0.02 * self.zoomMultiplier),
+        .longitudeDelta = (0.02 * self.zoomMultiplier)
     };
     
     MKCoordinateRegion currentRegion =
@@ -86,6 +88,19 @@
     };
 
     mapViewOutlet.region = currentRegion;
+}
+- (IBAction)zoomButtonPressed:(id)sender
+{
+    self.zoomMultiplier*=2;
+    NSLog(@"%f", self.zoomMultiplier);
+    if (self.zoomMultiplier < 16000)
+    {
+        [self createMapRegionAndSpanWithCoordinate:self.currentCoordinate];
+    }
+    else
+    {
+        self.zoomMultiplier = 8000;
+    }
 }
 
 #pragma mark - Search Bar Methods

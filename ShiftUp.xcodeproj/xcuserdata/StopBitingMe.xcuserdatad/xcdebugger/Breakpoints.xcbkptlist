@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388447530.199292"
+         timestampString = "388643295.947578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "32"
-         endingLineNumber = "32"
+         startingLineNumber = "33"
+         endingLineNumber = "33"
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643295.947578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-hasReceivedNearbyEvents:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "124"
-         endingLineNumber = "124"
+         startingLineNumber = "139"
+         endingLineNumber = "139"
          landmarkName = "-createAnnotationFromEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -112,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
+         startingLineNumber = "133"
+         endingLineNumber = "133"
          landmarkName = "-createAnnotationFromEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -125,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388639430.727445"
+         timestampString = "388643295.947578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "46"
-         endingLineNumber = "46"
+         startingLineNumber = "48"
+         endingLineNumber = "48"
          landmarkName = "-hasCurrentCoordinate:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -138,11 +138,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "129"
-         endingLineNumber = "129"
+         startingLineNumber = "144"
+         endingLineNumber = "144"
          landmarkName = "-mapView:viewForAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643295.947578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "63"
-         endingLineNumber = "63"
+         startingLineNumber = "65"
+         endingLineNumber = "65"
          landmarkName = "-hasReceivedNearbyEvents:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121"
+         startingLineNumber = "136"
+         endingLineNumber = "136"
          landmarkName = "-createAnnotationFromEvent:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -216,11 +216,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643295.947578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "69"
-         endingLineNumber = "69"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "-createMapRegionAndSpanWithCoordinate:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,11 +229,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "103"
-         endingLineNumber = "103"
+         startingLineNumber = "118"
+         endingLineNumber = "118"
          landmarkName = "-searchBarSearchButtonClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -242,11 +242,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "101"
-         endingLineNumber = "101"
+         startingLineNumber = "116"
+         endingLineNumber = "116"
          landmarkName = "-searchBarSearchButtonClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -255,11 +255,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "111"
-         endingLineNumber = "111"
+         startingLineNumber = "126"
+         endingLineNumber = "126"
          landmarkName = "-searchBarShouldEndEditing:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -268,11 +268,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640163.831127"
+         timestampString = "388643731.44367"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "109"
-         endingLineNumber = "109"
+         startingLineNumber = "124"
+         endingLineNumber = "124"
          landmarkName = "-searchBarShouldEndEditing:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -281,11 +281,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ShiftUp/ViewController.m"
-         timestampString = "388640090.879623"
+         timestampString = "388643295.947578"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "56"
-         endingLineNumber = "56"
+         startingLineNumber = "58"
+         endingLineNumber = "58"
          landmarkName = "-hasReceivedSearchCoordinates:"
          landmarkType = "5">
       </FileBreakpoint>
