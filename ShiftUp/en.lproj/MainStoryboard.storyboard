@@ -13,6 +13,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VS9-fZ-e7o"/>
+                            <searchBar contentMode="redraw" text="" placeholder="Search By Zipcode" translatesAutoresizingMaskIntoConstraints="NO" id="dmy-jX-Sse">
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="KcR-MJ-fgn"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -20,11 +30,15 @@
                             <constraint firstItem="VS9-fZ-e7o" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="E3d-WJ-hSS"/>
                             <constraint firstItem="VS9-fZ-e7o" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="L6d-0c-Pxq"/>
                             <constraint firstItem="VS9-fZ-e7o" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="bwp-cl-z2D"/>
+                            <constraint firstItem="dmy-jX-Sse" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="lZe-qN-uYu"/>
+                            <constraint firstItem="dmy-jX-Sse" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="qxg-7G-R0X"/>
+                            <constraint firstItem="dmy-jX-Sse" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="sgq-5N-2QY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TiU-7H-aZw"/>
                     <connections>
                         <outlet property="mapViewOutlet" destination="VS9-fZ-e7o" id="6G8-it-BOl"/>
+                        <outlet property="searchBarOutlet" destination="dmy-jX-Sse" id="2fJ-G8-RBt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -58,6 +72,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="mapViewOutlet" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="searchBarOutlet" candidateClass="UISearchBar"/>
             </relationships>
         </class>
     </classes>

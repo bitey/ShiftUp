@@ -14,6 +14,7 @@
 @interface ViewController ()
 {
     __weak IBOutlet MKMapView *mapViewOutlet;
+    __weak IBOutlet UISearchBar *searchBarOutlet;
 }
 
 @property (strong, nonatomic) APIManager *eventAPIManager;
@@ -87,6 +88,33 @@
 
     mapViewOutlet.region = currentRegion;
 }
+
+#pragma mark - Search Bar Methods
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    NSLog(@"started editing");
+    return YES;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    NSLog(@"return button pressed");
+    
+}
+
+//This method isn't working correctly.
+//It should resign the first responder
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    NSLog(@"search bar should end editing");
+    return YES;
+    
+}
+
+#pragma mark - Annotation Methods
 
 -(void)createAnnotationFromEvent:(Event*)event
 {

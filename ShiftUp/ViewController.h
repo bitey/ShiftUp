@@ -16,7 +16,7 @@
 
 
 
-@interface ViewController : UIViewController <MKMapViewDelegate, MKAnnotation, LocationManagerDelegate, APIManagerDelegate, GeocodingManagerDelegate>
+@interface ViewController : UIViewController <MKMapViewDelegate, MKAnnotation, LocationManagerDelegate, APIManagerDelegate, GeocodingManagerDelegate, UISearchBarDelegate>
 
 -(void)hasCurrentCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
 
@@ -25,6 +25,12 @@
 -(void)hasReceivedNearbyEvents:(NSMutableArray *)nearbyEvents;
 
 -(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar;
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;
 
 -(void)createAnnotationFromEvent:(Event*)event;
 
