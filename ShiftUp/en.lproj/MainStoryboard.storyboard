@@ -54,11 +54,27 @@
                     <connections>
                         <outlet property="mapViewOutlet" destination="VS9-fZ-e7o" id="6G8-it-BOl"/>
                         <outlet property="searchBarOutlet" destination="dmy-jX-Sse" id="2fJ-G8-RBt"/>
+                        <segue destination="nhf-g9-8u6" kind="push" identifier="PushForEventDetails" id="q93-qh-ylk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938" y="102"/>
+        </scene>
+        <!--Event Details View Controller-->
+        <scene sceneID="Vx3-Z2-YTN">
+            <objects>
+                <viewController id="nhf-g9-8u6" customClass="EventDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vhw-QM-mgG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jvz-AB-Cl1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bh-eM-zOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jd9-dR-Mg8">
@@ -80,12 +96,16 @@
         </scene>
     </scenes>
     <classes>
+        <class className="EventDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EventDetailsViewController.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
+                <relationship kind="action" name="zoomButtonPressed:"/>
                 <relationship kind="outlet" name="mapViewOutlet" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="searchBarOutlet" candidateClass="UISearchBar"/>
             </relationships>

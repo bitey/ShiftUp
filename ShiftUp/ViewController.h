@@ -13,7 +13,7 @@
 #import "LocationManager.h"
 #import <MapKit/MapKit.h>
 #import <UIKit/UIKit.h>
-
+#import "EventDetailsViewController.h"
 
 
 @interface ViewController : UIViewController <MKMapViewDelegate, MKAnnotation, LocationManagerDelegate, APIManagerDelegate, GeocodingManagerDelegate, UISearchBarDelegate>
@@ -26,13 +26,15 @@
 
 -(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
 
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar;
+-(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar;
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
 
-- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;
+-(BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar;
 
 -(void)createAnnotationFromEvent:(Event*)event;
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation;
 

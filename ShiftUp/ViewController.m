@@ -64,6 +64,8 @@
     {
         [self createAnnotationFromEvent: [nearbyEvents objectAtIndex:i]];
     }
+    
+    NSLog(@"%@", nearbyEvents);
 }
 
 -(void)createMapRegionAndSpanWithCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate
@@ -92,7 +94,6 @@
 - (IBAction)zoomButtonPressed:(id)sender
 {
     self.zoomMultiplier*=2;
-    NSLog(@"%f", self.zoomMultiplier);
     if (self.zoomMultiplier < 16000)
     {
         [self createMapRegionAndSpanWithCoordinate:self.currentCoordinate];
@@ -122,6 +123,7 @@
 
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
 {
+    self.zoomMultiplier = 1;
     [self.missGeocodingManager convertToPlacemarksFromString:searchBar.text];
     NSLog(@"search bar should end editing");
     return YES;
@@ -152,6 +154,15 @@
 
 -(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"PushForEventDetails"])
+    {
+        EventDetailsViewController *edvc = [segue destinationViewController];
+    }
     
 }
 

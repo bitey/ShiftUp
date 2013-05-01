@@ -25,6 +25,7 @@
 		B48B41B0171B09BA0032968D /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41AF171B09BA0032968D /* Annotation.m */; };
 		B48B41B5171C85FF0032968D /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41B4171C85FF0032968D /* LocationManager.m */; };
 		B48B41C0172194D00032968D /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = B48B41BF172194D00032968D /* Event.m */; };
+		B4C5C99517304A27008251AB /* EventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C5C99417304A27008251AB /* EventDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		B48B41B4171C85FF0032968D /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		B48B41BE172194D00032968D /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		B48B41BF172194D00032968D /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		B4C5C99317304A27008251AB /* EventDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailsViewController.h; sourceTree = "<group>"; };
+		B4C5C99417304A27008251AB /* EventDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				B48B41971715FBD50032968D /* AppDelegate.m */,
 				B48B41A21715FBD50032968D /* ViewController.h */,
 				B48B41A31715FBD50032968D /* ViewController.m */,
+				B4C5C99317304A27008251AB /* EventDetailsViewController.h */,
+				B4C5C99417304A27008251AB /* EventDetailsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				5EC434A61720A31A00353E26 /* APIManager.m in Sources */,
 				B48B41C0172194D00032968D /* Event.m in Sources */,
 				B41385A517271EA800B49878 /* GeocodingManager.m in Sources */,
+				B4C5C99517304A27008251AB /* EventDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
