@@ -11,15 +11,18 @@
 @implementation Annotation
 
 -(id)initWithLatitude:(float)latitude
-             andLongitude:(float)longitude
-                andTitle:(NSString*)titleString
-             andSubTitle:(NSString*)subtitleString
+         andLongitude:(float)longitude
+             andTitle:(NSString*)titleString
+          andSubTitle:(NSString*)subtitleString
+       andDescription:(NSString*)description
+
 {
     if (self = [super init])
     {
         self.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
         self.title = titleString;
         self.subtitle = subtitleString;
+        self.description = description;
     }
     return self;
 }

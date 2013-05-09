@@ -16,7 +16,7 @@
 #import "EventDetailsViewController.h"
 
 
-@interface ViewController : UIViewController <MKMapViewDelegate, MKAnnotation, LocationManagerDelegate, APIManagerDelegate, GeocodingManagerDelegate, UISearchBarDelegate>
+@interface ViewController : UIViewController <MKMapViewDelegate, LocationManagerDelegate, APIManagerDelegate, GeocodingManagerDelegate, UISearchBarDelegate>
 
 -(void)hasCurrentCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate;
 

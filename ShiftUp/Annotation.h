@@ -8,16 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import "Event.h"
 
 @interface Annotation : NSObject <MKAnnotation>
 
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *subtitle;
+@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) Event *event;
 
 -(id)initWithLatitude:(float)latitude
          andLongitude:(float)longitude
              andTitle:(NSString*)titleString
-          andSubTitle:(NSString*)subtitleString;
+          andSubTitle:(NSString*)subtitleString
+       andDescription:(NSString*)description;
 
 @end

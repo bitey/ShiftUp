@@ -155,16 +155,16 @@
 		B48B41B6171C86420032968D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B41385A317271EA800B49878 /* GeocodingManager.h */,
-				B41385A417271EA800B49878 /* GeocodingManager.m */,
 				B48B41AE171B09BA0032968D /* Annotation.h */,
 				B48B41AF171B09BA0032968D /* Annotation.m */,
-				B48B41B3171C85FF0032968D /* LocationManager.h */,
-				B48B41B4171C85FF0032968D /* LocationManager.m */,
 				5EC434A41720A31A00353E26 /* APIManager.h */,
 				5EC434A51720A31A00353E26 /* APIManager.m */,
 				B48B41BE172194D00032968D /* Event.h */,
 				B48B41BF172194D00032968D /* Event.m */,
+				B41385A317271EA800B49878 /* GeocodingManager.h */,
+				B41385A417271EA800B49878 /* GeocodingManager.m */,
+				B48B41B3171C85FF0032968D /* LocationManager.h */,
+				B48B41B4171C85FF0032968D /* LocationManager.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

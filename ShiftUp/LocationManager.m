@@ -44,7 +44,9 @@
 - (void)locationManager:(CLLocationManager *)manager
        didFailWithError:(NSError *)error
 {
-    NSLog(@"This just happened: %@", error);
+    NSLog(@"This just happened with the Location Manager: %@", error);
+    [self.mrLocationManager startUpdatingLocation];
+    
 }
 
 @end
