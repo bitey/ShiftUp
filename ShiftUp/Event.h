@@ -22,4 +22,9 @@
 @property (strong, nonatomic) NSString *endDate;
 @property (assign, nonatomic) BOOL *active;
 
+-(id)initWithLatitude:(float)latitude
+         andLongitude:(float)longitude
+             andTitle:(NSString*)titleString
+          andSubTitle:(NSString*)subtitleString;
+
 @end

@@ -20,6 +20,7 @@
 @property (strong, nonatomic) APIManager *eventAPIManager;
 @property (strong, nonatomic) Annotation *myAnnotation;
 @property (assign, nonatomic) CLLocationCoordinate2D currentCoordinate;
+@property (strong, nonatomic) NSMutableArray *events;
 @property (strong, nonatomic) GeocodingManager *missGeocodingManager;
 @property (strong, nonatomic) LocationManager *missLocationManager;
 @property (strong, nonatomic) Annotation *selectedAnnotation;
@@ -38,6 +39,14 @@
     self.missGeocodingManager = [[GeocodingManager alloc]init];
     self.missGeocodingManager.delegate = self;
     
+    /////////////////////////////////////////
+    // The following should be deleted once the APIs are in place
+    //
+    //
+    self.events = [[NSMutableArray alloc]init];
+    //
+    ////////////////////////////////////////////
+    
     self.zoomMultiplier = 1;
 }
 
@@ -46,11 +55,21 @@
 -(void)hasCurrentCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate
 {
     self.currentCoordinate = mostRecentCoordinate;
-    self.eventAPIManager = [[APIManager alloc]initWithNewCoordinates:self.currentCoordinate];
-    self.eventAPIManager.delegate = self;
+    //
+    //self.eventAPIManager = [[APIManager alloc]initWithNewCoordinates:self.currentCoordinate];
+    //self.eventAPIManager.delegate = self;
+    //
     [self createMapRegionAndSpanWithCoordinate:self.currentCoordinate];
-    [self.eventAPIManager connectToAFGEAndTellDelegates];
+    //
+    //[self.eventAPIManager connectToAFGEAndTellDelegates];
     
+    
+    ///
+    ////
+    ////Delete the below method call
+    ////
+    /////
+    [self createEvents];
 }
 
 -(void)hasReceivedSearchCoordinates:(CLPlacemark *)placemark
@@ -89,6 +108,30 @@
 
     mapViewOutlet.region = currentRegion;
 }
+
+-(void)createEvents
+{
+    /////////////////////////////////////////
+    // The following should be deleted once the APIs are in place
+    //
+    Event *event1 = [[Event alloc]initWithLatitude:38.897234 andLongitude:-77.010646 andTitle:@"Pauls Super Awesome Event" andSubTitle:@"This is where Paul will be demoing all the features"];
+    [self.events addObject:event1];
+    
+    Event *event2 = [[Event alloc]initWithLatitude:38.893596 andLongitude:-77.014576 andTitle:@"Pizza Party" andSubTitle:@"Prices so low we are giving it away"];
+    [self.events addObject:event2];
+    
+    Event *event3 = [[Event alloc]initWithLatitude:38.902055 andLongitude:-77.015362 andTitle:@"Silent Dance Party" andSubTitle:@"Shhhhhh"];
+    [self.events addObject:event3];
+    
+    for (Event *currentEvent in self.events)
+    {
+        [self createAnnotationFromEvent:currentEvent];
+    }
+    
+    
+    ////////////////////////////////////////////
+}
+
 - (IBAction)zoomButtonPressed:(id)sender
 {
     self.zoomMultiplier*=2;
