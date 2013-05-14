@@ -184,23 +184,28 @@
     [mapViewOutlet addAnnotation:self.myAnnotation];
 }
 
+
 -(MKAnnotationView *)mapView:(MKMapView *)mapView
            viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    //UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     MKAnnotationView *myAnnotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"myAnnotation"];
-    if([annotation isKindOfClass: [MKUserLocation class]])
-    {
-        return nil;
-    }
+//    if([myAnnotationView isKindOfClass: [MKUserLocation class]])
+//    {
+//        return nil;
+//    }
     
     if (myAnnotationView == nil) {
         myAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
+        myAnnotationView.canShowCallout = YES;
+        myAnnotationView.image = [UIImage imageNamed:@"83-calendar.png"];
+    }
+    else
+    {
+        myAnnotationView.annotation = annotation;
     }
 
-    myAnnotationView.canShowCallout = YES;
-    
-    myAnnotationView.rightCalloutAccessoryView = detailButton;
+    //myAnnotationView.rightCalloutAccessoryView = detailButton;
     
     return myAnnotationView;
 }

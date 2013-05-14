@@ -10,6 +10,7 @@
 		5EC4349B171EB1A800353E26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC4349A171EB1A800353E26 /* CoreLocation.framework */; };
 		5EC434A61720A31A00353E26 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC434A51720A31A00353E26 /* APIManager.m */; };
 		B41385A517271EA800B49878 /* GeocodingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B41385A417271EA800B49878 /* GeocodingManager.m */; };
+		B467CCAB1742C0D800DCE7A8 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B467CCAA1742C0D800DCE7A8 /* 83-calendar.png */; };
 		B48B41881715FBD50032968D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41871715FBD50032968D /* UIKit.framework */; };
 		B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41891715FBD50032968D /* Foundation.framework */; };
 		B48B418C1715FBD50032968D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B418B1715FBD50032968D /* CoreGraphics.framework */; };
@@ -34,6 +35,7 @@
 		5EC434A51720A31A00353E26 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		B41385A317271EA800B49878 /* GeocodingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeocodingManager.h; path = ../GeocodingManager.h; sourceTree = "<group>"; };
 		B41385A417271EA800B49878 /* GeocodingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeocodingManager.m; path = ../GeocodingManager.m; sourceTree = "<group>"; };
+		B467CCAA1742C0D800DCE7A8 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
 		B48B41841715FBD50032968D /* ShiftUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48B41871715FBD50032968D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B48B41891715FBD50032968D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +143,7 @@
 		B48B418E1715FBD50032968D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B467CCAA1742C0D800DCE7A8 /* 83-calendar.png */,
 				B48B418F1715FBD50032968D /* ShiftUp-Info.plist */,
 				B48B41901715FBD50032968D /* InfoPlist.strings */,
 				B48B41931715FBD50032968D /* main.m */,
@@ -225,6 +228,7 @@
 				B48B419C1715FBD50032968D /* Default@2x.png in Resources */,
 				B48B419E1715FBD50032968D /* Default-568h@2x.png in Resources */,
 				B48B41A11715FBD50032968D /* MainStoryboard.storyboard in Resources */,
+				B467CCAB1742C0D800DCE7A8 /* 83-calendar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
