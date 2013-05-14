@@ -12,7 +12,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VS9-fZ-e7o"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VS9-fZ-e7o">
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="1kP-7Y-uEU"/>
+                                </connections>
+                            </mapView>
                             <searchBar contentMode="redraw" text="" placeholder="Search By Zipcode" translatesAutoresizingMaskIntoConstraints="NO" id="dmy-jX-Sse">
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
