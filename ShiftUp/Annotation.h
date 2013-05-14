@@ -21,7 +21,5 @@
 -(id)initWithLatitude:(float)latitude
          andLongitude:(float)longitude
              andTitle:(NSString*)titleString
-          andSubTitle:(NSString*)subtitleString
-       andDescription:(NSString*)description;
-
+          andSubTitle:(NSString*)subtitleString;
 @end

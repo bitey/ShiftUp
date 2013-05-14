@@ -39,14 +39,6 @@
     self.missGeocodingManager = [[GeocodingManager alloc]init];
     self.missGeocodingManager.delegate = self;
     
-    /////////////////////////////////////////
-    // The following should be deleted once the APIs are in place
-    //
-    //
-    self.events = [[NSMutableArray alloc]init];
-    //
-    ////////////////////////////////////////////
-    
     self.zoomMultiplier = 1;
 }
 
@@ -55,21 +47,13 @@
 -(void)hasCurrentCoordinate:(CLLocationCoordinate2D)mostRecentCoordinate
 {
     self.currentCoordinate = mostRecentCoordinate;
-    //
-    //self.eventAPIManager = [[APIManager alloc]initWithNewCoordinates:self.currentCoordinate];
-    //self.eventAPIManager.delegate = self;
-    //
+    
+    self.eventAPIManager = [[APIManager alloc]initWithNewCoordinates:self.currentCoordinate];
+    self.eventAPIManager.delegate = self;
+    
     [self createMapRegionAndSpanWithCoordinate:self.currentCoordinate];
-    //
-    //[self.eventAPIManager connectToAFGEAndTellDelegates];
     
-    
-    ///
-    ////
-    ////Delete the below method call
-    ////
-    /////
-    [self createEvents];
+    [self.eventAPIManager connectToAFGEAndTellDelegates];
 }
 
 -(void)hasReceivedSearchCoordinates:(CLPlacemark *)placemark
@@ -107,29 +91,6 @@
     };
 
     mapViewOutlet.region = currentRegion;
-}
-
--(void)createEvents
-{
-    /////////////////////////////////////////
-    // The following should be deleted once the APIs are in place
-    //
-    Event *event1 = [[Event alloc]initWithLatitude:38.897234 andLongitude:-77.010646 andTitle:@"Pauls Super Awesome Event" andSubTitle:@"This is where Paul will be demoing all the features"];
-    [self.events addObject:event1];
-    
-    Event *event2 = [[Event alloc]initWithLatitude:38.893596 andLongitude:-77.014576 andTitle:@"Pizza Party" andSubTitle:@"Prices so low we are giving it away"];
-    [self.events addObject:event2];
-    
-    Event *event3 = [[Event alloc]initWithLatitude:38.902055 andLongitude:-77.015362 andTitle:@"Silent Dance Party" andSubTitle:@"Shhhhhh"];
-    [self.events addObject:event3];
-    
-    for (Event *currentEvent in self.events)
-    {
-        [self createAnnotationFromEvent:currentEvent];
-    }
-    
-    
-    ////////////////////////////////////////////
 }
 
 - (IBAction)zoomButtonPressed:(id)sender
@@ -178,8 +139,7 @@
     self.myAnnotation = [[Annotation alloc] initWithLatitude:event.latitude
                                                 andLongitude:event.longitude
                                                     andTitle:event.title
-                                                 andSubTitle:event.subtitle
-                                              andDescription:event.description];
+                                                 andSubTitle:event.description];
     self.selectedAnnotation = self.myAnnotation;
     [mapViewOutlet addAnnotation:self.myAnnotation];
 }

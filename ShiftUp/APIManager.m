@@ -60,14 +60,18 @@
                                                  {
                                                     Event *currentEvent = [[Event alloc]init];
                                                     currentEvent.title = [[eventResults objectAtIndex:i] objectAtIndex:0];
-                                                    currentEvent.subtitle = [[eventResults objectAtIndex:i] objectAtIndex:1];
-                                                    currentEvent.description = [[eventResults objectAtIndex:i] objectAtIndex:2];
-                                                    currentEvent.urlString = [[eventResults objectAtIndex:i] objectAtIndex:3];
-                                                    currentEvent.latitude = [(NSNumber*)[[eventResults objectAtIndex:i] objectAtIndex:4] floatValue];
-                                                    currentEvent.longitude = [(NSNumber*)[[eventResults objectAtIndex:i] objectAtIndex:5] floatValue];
-                                                    currentEvent.startDate = [[eventResults objectAtIndex:i] objectAtIndex:6];
-                                                    currentEvent.endDate = [[eventResults objectAtIndex:i] objectAtIndex:7];
-                                                    //currentEvent.active = [eventResults objectAtIndex:i];
+                                                    currentEvent.type = [[eventResults objectAtIndex:i] objectAtIndex:1];
+                                                    currentEvent.urlString = [[eventResults objectAtIndex:i] objectAtIndex:2];
+                                                    currentEvent.startDate = [[eventResults objectAtIndex:i] objectAtIndex:3];
+                                                    currentEvent.endDate = [[eventResults objectAtIndex:i] objectAtIndex:4];
+                                                    currentEvent.specificLocation = [[eventResults objectAtIndex:i] objectAtIndex:5];
+                                                    currentEvent.address = [[eventResults objectAtIndex:i] objectAtIndex:6];
+                                                    currentEvent.city = [[eventResults objectAtIndex:i] objectAtIndex:7];
+                                                    currentEvent.zip = [[eventResults objectAtIndex:i] objectAtIndex:8];
+                                                    currentEvent.latitude = [(NSNumber*)[[eventResults objectAtIndex:i]objectAtIndex:9]floatValue];
+                                                    currentEvent.longitude = [(NSNumber*)[[eventResults objectAtIndex:i]objectAtIndex:10]floatValue];
+                                                    currentEvent.thumbnailURLString = [[eventResults objectAtIndex:i]objectAtIndex:11];
+                                                     currentEvent.description = [[eventResults objectAtIndex:i]objectAtIndex:11];
                                                     [allNearbyEvents addObject:currentEvent];
                                                  }
                                             [self.delegate hasReceivedNearbyEvents:allNearbyEvents];

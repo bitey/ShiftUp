@@ -12,19 +12,22 @@
 @interface Event : NSObject
 
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *subtitle;
-@property (strong, nonatomic) NSString *description;
+//@property (strong, nonatomic) NSString *subtitle;
+@property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) NSString *urlString;
+@property (strong, nonatomic) NSString *startDate;
+@property (strong, nonatomic) NSString *endDate;
+@property (strong, nonatomic) NSString *startTime;
+@property (strong, nonatomic) NSString *endTime;
+@property (strong, nonatomic) NSString *specificLocation;
+@property (strong, nonatomic) NSString *address;
+@property (strong, nonatomic) NSString *city;
+@property (strong, nonatomic) NSString *state;
+@property (strong, nonatomic) NSString *zip;
 @property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 @property (assign, nonatomic) float latitude;
 @property (assign, nonatomic) float longitude;
-@property (strong, nonatomic) NSString *startDate;
-@property (strong, nonatomic) NSString *endDate;
-@property (assign, nonatomic) BOOL *active;
-
--(id)initWithLatitude:(float)latitude
-         andLongitude:(float)longitude
-             andTitle:(NSString*)titleString
-          andSubTitle:(NSString*)subtitleString;
+@property (strong, nonatomic) NSString *thumbnailURLString;
+@property (strong, nonatomic) NSString *description;
 
 @end
