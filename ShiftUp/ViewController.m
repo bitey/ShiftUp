@@ -40,6 +40,7 @@
     self.missGeocodingManager.delegate = self;
     
     self.zoomMultiplier = 1;
+    
 }
 
 #pragma mark - Creating the Map Methods
@@ -150,10 +151,10 @@
 {
     //UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     MKAnnotationView *myAnnotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"myAnnotation"];
-//    if([myAnnotationView isKindOfClass: [MKUserLocation class]])
-//    {
-//        return nil;
-//    }
+    if([myAnnotationView isKindOfClass: [MKUserLocation class]])
+    {
+        return nil;
+    }
     
     if (myAnnotationView == nil) {
         myAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];

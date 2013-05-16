@@ -19,7 +19,7 @@
 @property (strong, nonatomic) NSString *endDate;
 @property (strong, nonatomic) NSString *startTime;
 @property (strong, nonatomic) NSString *endTime;
-@property (strong, nonatomic) NSString *specificLocation;
+@property (strong, nonatomic) NSString *room;
 @property (strong, nonatomic) NSString *address;
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *state;
