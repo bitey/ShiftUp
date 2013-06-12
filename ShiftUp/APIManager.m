@@ -29,9 +29,8 @@
 
 -(void)connectToAFGEAndTellDelegates
 {
-    
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:
-                                              [NSURL URLWithString:@"http://www.afge.org/webserv/afgeEventsToJSON.cfc?method=serializeToJSON&returnformat=JSON&apiKey=839dj29w4c"]]
+                                             [NSURL URLWithString:@"http://www.afge.org/webserv/afgeEventsToJSON.cfc?method=serializeToJSON&returnformat=JSON&apiKey=839dj29w4c"]]
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler: ^void(NSURLResponse *webResponse, NSData *webData, NSError *theirError)
                                              {

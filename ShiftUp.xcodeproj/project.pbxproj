@@ -10,6 +10,8 @@
 		5EC4349B171EB1A800353E26 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC4349A171EB1A800353E26 /* CoreLocation.framework */; };
 		5EC434A61720A31A00353E26 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC434A51720A31A00353E26 /* APIManager.m */; };
 		B41385A517271EA800B49878 /* GeocodingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B41385A417271EA800B49878 /* GeocodingManager.m */; };
+		B449D21B176933F200BFA80A /* DummyAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B449D21A176933F200BFA80A /* DummyAPI.m */; };
+		B449D21D17693A8900BFA80A /* dummyData.txt in Resources */ = {isa = PBXBuildFile; fileRef = B449D21C17693A8900BFA80A /* dummyData.txt */; };
 		B467CCAB1742C0D800DCE7A8 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = B467CCAA1742C0D800DCE7A8 /* 83-calendar.png */; };
 		B48B41881715FBD50032968D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41871715FBD50032968D /* UIKit.framework */; };
 		B48B418A1715FBD50032968D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48B41891715FBD50032968D /* Foundation.framework */; };
@@ -35,6 +37,9 @@
 		5EC434A51720A31A00353E26 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
 		B41385A317271EA800B49878 /* GeocodingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeocodingManager.h; path = ../GeocodingManager.h; sourceTree = "<group>"; };
 		B41385A417271EA800B49878 /* GeocodingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeocodingManager.m; path = ../GeocodingManager.m; sourceTree = "<group>"; };
+		B449D219176933F200BFA80A /* DummyAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyAPI.h; sourceTree = "<group>"; };
+		B449D21A176933F200BFA80A /* DummyAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyAPI.m; sourceTree = "<group>"; };
+		B449D21C17693A8900BFA80A /* dummyData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dummyData.txt; path = ../dummyData.txt; sourceTree = "<group>"; };
 		B467CCAA1742C0D800DCE7A8 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "83-calendar.png"; sourceTree = "<group>"; };
 		B48B41841715FBD50032968D /* ShiftUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48B41871715FBD50032968D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -143,6 +148,7 @@
 		B48B418E1715FBD50032968D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B449D21C17693A8900BFA80A /* dummyData.txt */,
 				B467CCAA1742C0D800DCE7A8 /* 83-calendar.png */,
 				B48B418F1715FBD50032968D /* ShiftUp-Info.plist */,
 				B48B41901715FBD50032968D /* InfoPlist.strings */,
@@ -168,6 +174,8 @@
 				B41385A417271EA800B49878 /* GeocodingManager.m */,
 				B48B41B3171C85FF0032968D /* LocationManager.h */,
 				B48B41B4171C85FF0032968D /* LocationManager.m */,
+				B449D219176933F200BFA80A /* DummyAPI.h */,
+				B449D21A176933F200BFA80A /* DummyAPI.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -229,6 +237,7 @@
 				B48B419E1715FBD50032968D /* Default-568h@2x.png in Resources */,
 				B48B41A11715FBD50032968D /* MainStoryboard.storyboard in Resources */,
 				B467CCAB1742C0D800DCE7A8 /* 83-calendar.png in Resources */,
+				B449D21D17693A8900BFA80A /* dummyData.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +257,7 @@
 				B48B41C0172194D00032968D /* Event.m in Sources */,
 				B41385A517271EA800B49878 /* GeocodingManager.m in Sources */,
 				B4C5C99517304A27008251AB /* EventDetailsViewController.m in Sources */,
+				B449D21B176933F200BFA80A /* DummyAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
