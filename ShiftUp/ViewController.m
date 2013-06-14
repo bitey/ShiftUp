@@ -37,13 +37,13 @@
 {
     [super viewDidLoad];
     self.missLocationManager = [[LocationManager alloc]init];
-    self.missLocationManager.delegate = self;
-    
     self.missGeocodingManager = [[GeocodingManager alloc]init];
-    self.missGeocodingManager.delegate = self;
-
     self.selectedAnnotation = [[Annotation alloc]init];
     
+    self.missLocationManager.delegate = self;
+    
+    self.missGeocodingManager.delegate = self;
+
     self.zoomMultiplier = 1;
     
 }
@@ -196,12 +196,10 @@
     self.titleToPass = self.selectedAnnotation.title;
     self.latitudeToPass = self.selectedAnnotation.coordinate.latitude;
     self.longitudeToPass = self.selectedAnnotation.coordinate.longitude;
+    
+    [self performSegueWithIdentifier:@"PushForEventDetails" sender:nil];
 }
 
--(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
-{
-    
-}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -211,7 +209,7 @@
         edvc.segueString = @"hello";
         edvc.longitude = self.longitudeToPass;
         edvc.latitude = self.latitudeToPass;
-        edvc.title = self.titleToPass;
+        edvc.eventTitle = self.titleToPass;
     }
     
 }
