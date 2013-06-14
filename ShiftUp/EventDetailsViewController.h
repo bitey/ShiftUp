@@ -12,5 +12,8 @@
 @interface EventDetailsViewController : UIViewController
 
 @property (strong, nonatomic) NSString *segueString;
+@property (strong, nonatomic) NSString *eventTitle;
+@property (assign, nonatomic) float latitude;
+@property (assign, nonatomic) float longitude;
 
 @end

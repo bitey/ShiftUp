@@ -25,6 +25,9 @@
 @property (strong, nonatomic) LocationManager *missLocationManager;
 @property (strong, nonatomic) Annotation *selectedAnnotation;
 @property (assign, nonatomic) float zoomMultiplier;
+@property (assign, nonatomic) float latitudeToPass;
+@property (assign, nonatomic) float longitudeToPass;
+@property (strong, nonatomic) NSString *titleToPass;
 
 @end
 
@@ -38,6 +41,8 @@
     
     self.missGeocodingManager = [[GeocodingManager alloc]init];
     self.missGeocodingManager.delegate = self;
+
+    self.selectedAnnotation = [[Annotation alloc]init];
     
     self.zoomMultiplier = 1;
     
@@ -141,6 +146,7 @@
                                                 andLongitude:event.longitude
                                                     andTitle:event.title
                                                  andSubTitle:event.description];
+    
     self.selectedAnnotation = self.myAnnotation;
     [mapViewOutlet addAnnotation:self.myAnnotation];
 }
@@ -149,12 +155,13 @@
 -(MKAnnotationView *)mapView:(MKMapView *)mapView
            viewForAnnotation:(id<MKAnnotation>)annotation
 {
-    //UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    UIButton *detailButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     MKAnnotationView *myAnnotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"myAnnotation"];
     if([myAnnotationView isKindOfClass: [MKUserLocation class]])
     {
         return nil;
     }
+    myAnnotationView.canShowCallout = YES;
     
     if (myAnnotationView == nil) {
         myAnnotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
@@ -165,20 +172,35 @@
     {
         myAnnotationView.annotation = annotation;
     }
-
-    //myAnnotationView.rightCalloutAccessoryView = detailButton;
+    
+    
+    myAnnotationView.rightCalloutAccessoryView = detailButton;
     
     return myAnnotationView;
 }
 
--(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+//-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+//{
+//    if ([view.annotation isKindOfClass: [MKUserLocation class]])
+//        return;
+//    NSLog(@"annotation is: %@", view.annotation);
+//    
+//    self.selectedAnnotation = view.annotation;
+//    
+//    NSLog(@"annotation selected: %@", self.selectedAnnotation);
+//}
+
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    if ([view.annotation isKindOfClass: [MKUserLocation class]])
-        return;
+    self.selectedAnnotation = view.annotation;
+    self.titleToPass = self.selectedAnnotation.title;
+    self.latitudeToPass = self.selectedAnnotation.coordinate.latitude;
+    self.longitudeToPass = self.selectedAnnotation.coordinate.longitude;
+}
+
+-(void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
+{
     
-    self.myAnnotation = view.annotation;
-    
-    NSLog(@"annotation selected: %@", self.myAnnotation);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -187,6 +209,9 @@
     {
         EventDetailsViewController *edvc = [segue destinationViewController];
         edvc.segueString = @"hello";
+        edvc.longitude = self.longitudeToPass;
+        edvc.latitude = self.latitudeToPass;
+        edvc.title = self.titleToPass;
     }
     
 }

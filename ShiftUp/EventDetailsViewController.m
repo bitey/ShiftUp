@@ -9,6 +9,9 @@
 #import "EventDetailsViewController.h"
 
 @interface EventDetailsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *titleOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *latitudeOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *longitudeOutlet;
 
 @end
 
@@ -27,6 +30,14 @@
 {
     [super viewDidLoad];
     NSLog(@"segue string is %@", self.segueString);
+    self.titleOutlet.text = self.title;
+   
+    NSNumber *lat = [NSNumber numberWithFloat:self.latitude];
+    self.latitudeOutlet.text = [lat stringValue];
+    
+    NSNumber *longitude = [NSNumber numberWithFloat:self.longitude];
+    self.longitudeOutlet.text = [longitude stringValue];
+    
 }
 
 - (void)didReceiveMemoryWarning
